@@ -8,7 +8,8 @@
   --hero-button-hover-color: #188ce8;
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
-  --hero-background-color: #2f303a;
+  --hero-background-color: #c4c4c4;
+  --footer-background-color: #2f303a;
   --header-border-line-color: #ececec;
   --portfolio-border-line-color: #eeeeee;
   --item-gap: 30px;
@@ -146,8 +147,24 @@ ul {
   padding-top: 200px;
   padding-bottom: 200px;
   color: var(--regular-white-color);
-  background-color: var(--hero-background-color);
   text-align: center;
+}
+/* Фон на блк  Hero */
+.overlay {
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-color: var(--hero-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero > .container {
   width: 726px;
@@ -187,6 +204,28 @@ ul {
 .features-item {
   flex-basis: calc(100% / 4 - var(--item-gap));
   margin-left: var(--item-gap);
+}
+.features-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.features-item:nth-child(1)::before {
+  background-image: url(../images/antenna1.png);
+}
+.features-item:nth-child(2)::before {
+  background-image: url(../images/clock1.png);
+}
+.features-item:nth-child(3)::before {
+  background-image: url(../images/diagram1.png);
+}
+.features-item:nth-child(4)::before {
+  background-image: url(../images/astronaut1.png);
 }
 .features-title {
   display: none;
@@ -248,13 +287,14 @@ ul {
   font-weight: 500;
 }
 .team-text {
+  margin-bottom: 16px;
   letter-spacing: 0.03em;
 }
 /* Footer */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--hero-background-color);
+  background-color: var(--footer-background-color);
 }
 .footer .logo {
   margin-bottom: 20px;
