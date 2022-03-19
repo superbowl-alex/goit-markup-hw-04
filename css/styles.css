@@ -103,7 +103,7 @@ ul {
 .nav-list,
 .contact-list {
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
 }
 /* Основная навигация */
@@ -136,13 +136,18 @@ ul {
   margin-left: auto;
 }
 .contact-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .contact-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+}
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 /* Основной баннер */
 .hero {
