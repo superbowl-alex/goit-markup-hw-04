@@ -5,6 +5,8 @@
   --contact-text-color: rgba(255, 255, 255, 0.6);
   --regular-white-color: #ffffff;
   --regular-black-color: #000000;
+  --team-social-color: #afb1b8;
+  --footer-social-background-color: rgba(255, 255, 255, 0.1);
   --hero-button-hover-color: #188ce8;
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
@@ -153,8 +155,8 @@ ul {
 .overlay {
   width: 1600px;
   height: 600px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -216,16 +218,16 @@ ul {
   background-position: center;
 }
 .features-item:nth-child(1)::before {
-  background-image: url(../images/antenna1.png);
+  background-image: url(../images/antenna.svg);
 }
 .features-item:nth-child(2)::before {
-  background-image: url(../images/clock1.png);
+  background-image: url(../images/clock.svg);
 }
 .features-item:nth-child(3)::before {
-  background-image: url(../images/diagram1.png);
+  background-image: url(../images/diagram.svg);
 }
 .features-item:nth-child(4)::before {
-  background-image: url(../images/astronaut1.png);
+  background-image: url(../images/astronaut.svg);
 }
 .features-title {
   display: none;
@@ -290,11 +292,40 @@ ul {
   margin-bottom: 16px;
   letter-spacing: 0.03em;
 }
+.social-list {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--team-social-color);
+  background-color: var(--regular-white-color);
+}
+.social-link:hover {
+  color: var(--regular-white-color);
+  background-color: var(--accent-color);
+}
+.social-icon {
+  fill: currentColor;
+}
 /* Footer */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-background-color);
+}
+.footer > .container {
+  display: flex;
+  align-items: baseline;
 }
 .footer .logo {
   margin-bottom: 20px;
@@ -314,6 +345,25 @@ ul {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-social-subtitle {
+  margin-bottom: 20px;
+  color: var(--regular-white-color);
+  text-transform: uppercase;
+}
+.footer-social {
+  margin-left: 70px;
+}
+.footer .social-list {
+  padding: 0;
+}
+.footer .social-link {
+  color: var(--regular-white-color);
+  background-color: var(--footer-social-background-color);
+}
+.footer .social-link:hover {
+  background-color: var(--accent-color);
+}
+
 /* Портфолио */
 /* Примеры работ */
 .examples {
