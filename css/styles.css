@@ -353,6 +353,7 @@ ul {
 .footer-social-subtitle {
   margin-bottom: 20px;
   color: var(--regular-white-color);
+  line-height: 1.14;
   text-transform: uppercase;
 }
 .footer-social {
