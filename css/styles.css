@@ -289,8 +289,7 @@ ul {
 }
 .social-list {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  justify-content: center;
 }
 .social-item:not(:last-child) {
   margin-right: 10px;
